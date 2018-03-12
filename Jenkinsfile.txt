@@ -1,14 +1,14 @@
 pipeline {
     agent {
         docker {
-            image 'openjdk:8' 
+            image 'gradle:alpine' 
             args '-v /root/.m2:/root/.m2' 
         }
     }
     stages {
         stage('Build') { 
             steps {
-                sh './gradlew -B -DskipTests clean package' 
+                sh 'gradle -B -DskipTests clean package' 
             }
         }
     }
