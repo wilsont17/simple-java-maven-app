@@ -1,13 +1,13 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3-alpine' 
+            image 'gradle:alpine' 
         }
     }
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                bat 'gradle -B -DskipTests clean package' 
             }
         }
     }
