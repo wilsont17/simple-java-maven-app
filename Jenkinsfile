@@ -10,5 +10,6 @@ pipeline {
                 bat 'gradle -B -DskipTests clean package' 
             }
         }
+		
     }
 }
