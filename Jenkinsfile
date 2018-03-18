@@ -16,7 +16,11 @@ pipeline {
             steps {
                 sh './gradlew test'
             }
-
+			post {
+                always {
+                    junit 'target/surefire-reports/*.xml' 
+                }
+            }
         }
     }
 }
