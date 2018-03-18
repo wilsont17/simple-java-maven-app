@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'gradle -B -DskipTests clean package'
             }
         }
     }
