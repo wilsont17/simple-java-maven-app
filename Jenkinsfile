@@ -8,18 +8,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'gradle build' 
+                sh './gradlew build' 
             }
         }
-		stage('Test') {
-            steps {
-                sh 'gradle test'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
+
     }
 }
