@@ -11,13 +11,13 @@ set +x
 echo 'The following complex command extracts the value of the <name/> element'
 echo 'within <project/> of your Java/Maven project''s "pom.xml" file.'
 set -x
-NAME=`my-app`
+NAME='my-app'
 set +x
 
 echo 'The following complex command behaves similarly to the previous one but'
 echo 'extracts the value of the <version/> element within <project/> instead.'
 set -x
-VERSION=`1.0-SNAPSHOT`
+VERSION='1.0-SNAPSHOT'
 set +x
 
 echo 'The following command runs and outputs the execution of your Java'
