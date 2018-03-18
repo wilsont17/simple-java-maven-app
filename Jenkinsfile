@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'gradle:alpine' 
+            image 'maven:3-alpine' 
         }
     }
     stages {
