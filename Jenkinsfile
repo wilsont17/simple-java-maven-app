@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                shell 'gradle build -x test' 
+                sh 'gradle build -x test' 
             }
         }
     }
