@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+				sh 'gradle wrapper' 
                 sh 'gradle build' 
             }
         }
