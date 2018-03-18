@@ -11,5 +11,15 @@ pipeline {
                 sh 'gradle build' 
             }
         }
+		stage('Test') {
+            steps {
+                sh 'gradle test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
     }
 }
